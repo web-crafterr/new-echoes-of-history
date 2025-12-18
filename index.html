@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echos of History</title>
+ <link rel="stylesheet" href="nhome.css">
+     <link rel="stylesheet" href="ncivillization.css">
+     <link rel="stylesheet" href="neventtimeline.css">
+    <link rel="stylesheet" href="ngallery.css">
+     <link rel="stylesheet" href="ncontact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    // <!-- Contact Dialogue box Script -->
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("thankYouPopup");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();          // stop page reload
+            popup.style.display = "flex";
+            form.reset();                // clear inputs
+        });
+    });
+
+    function closePopup() {
+        document.getElementById("thankYouPopup").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <ul>
+               <li id="nav-page1"><a href="ncivillization.html">Civilization</a></li>
+                <li id="nav-page2"><a href="neventtimeline.html">Events Timeline</a></li>
+                <li id="nav-page3" class="logo"><a href="index.html"><img width=" 250px"
+                            src="https://image2url.com/images/1765829899703-c623cf8c-7187-450b-a3ca-544af0471590.png"
+                            alt="Echos of History Logo" class="nav-logo"></a></li>
+                <li id="nav-page4"><a href="ngallery.html">Gallery</a></li>
+                <li id="nav-page5"><a href="ncontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="pages">
+        <!-- HOME PAGE -->
+        <div class="page" id=”page1”>
+            <section id="homePage" class=" hero">
+                <div class="home-hero-img">
+                    <img src="../Assets/home-assets/home-hero-img.png" alt="home Hero"
+                        class="hero-bg-img">
+
+                    <div class="home-hero-text">
+                        <h1 class="home-hero-heading">ECHOS OF HISTORY</h1>
+                        <p class="home-hero-subheading">
+                            A SIMPLE AND ENGAGING WAY TO LEARN HISTORY — CLEAR, VISUAL, AND EASY TO FOLLOW.
+                        </p>
+                    </div>
+                </div>
+                <!-- MAIN HEADING -->
+                <h2 class="home-section-heading">Explore the Past Through Civilizations & Events</h2>
+                <section class="content">
+                    <div class="civilization">
+                        <div class="civilization-text-box">
+                            <h3 class="home-civillization-heading">Civilizations</h3>
+                            <p>
+                                Travel through the major eras that shaped human civilization. Discover the stories of
+                                remarkable leaders, everyday life, groundbreaking inventions, and artistic achievements
+                                that defined each period. Each era is explained simply, visually, and in a way that
+                                brings the past to life, allowing you to experience history not just as dates and
+                                events, but as vibrant stories that connect us to our shared human journey.
+                            </p>
+                            <a href="ncivillization.html">
+                                <button class="civilization-btn">Explore More</button>
+                            </a>
+                        </div>
+                        <div class="civilization-img">
+                            <img src="../Assets/home-assets/civillization-art.png">
+                        </div>
+                    </div>
+
+                    <div class="event-timeline">
+                        <div class="event-timeline-img">
+                            <img src="../Assets/home-assets/event-timeline-art.png">
+                        </div>
+                        <div class="event-timeline-text-box">
+                            <h3 class="event-timeline-heading">Event Timeline</h3>
+                            <p>
+                                See history unfold in a clear, step-by-step timeline. Follow the key events,
+                                breakthroughs, battles, and discoveries that shaped humanity and transformed societies.
+                                Each moment is presented in chronological order, making it easy to understand how the
+                                past connects to the present, and how one event led to another in the grand story of
+                                civilization. Dive into history with clarity and context, and watch the world evolve
+                                before your eyes. </p>
+                            <a href="neventtimeline.html">
+                                <button class="event-timeline-btn">Explore More</button>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="historic-gallery">
+                        <div class="historic-gallery-text-box">
+                            <h3 class="historic-gallery-heading">Historic Gallery</h3>
+                            <p>
+                                Experience history through the lives of extraordinary individuals. Explore rare
+                                portraits, statues, and artistic recreations that bring famous leaders, thinkers, and
+                                innovators to life. Discover the stories behind their achievements, struggles, and
+                                impact on the world. It’s the perfect space for visual learners who want to connect with
+                                the people who shaped history and understand how their actions changed the course of
+                                civilization. </p>
+                            <a href="ngallery.html">
+                                <button class="historic-gallery-btn">Explore More</button>
+                            </a>
+                        </div>
+                        <div class="historic-gallery-img">
+                            <img src="../Assets/home-assets/historic-gallery-art.png">
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <footer id="footer" class="footer-img">
+                <img src="https://i.ibb.co/pvYBkcPZ/footer.png" alt="footer" srcset="">
+            </footer>
+        </div>
+    </main>
+</body>
+<script>
+    // Nav link script
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar ul li:not(.logo) > a');
+
+        function setActiveLinkByHash() {
+            const currentHash = window.location.hash;
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentHash
+                );
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        setActiveLinkByHash();
+        window.addEventListener('hashchange', setActiveLinkByHash);
+    });
+    // Event timeline script
+    document.querySelectorAll(".content-box").forEach(box => {
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+    });
+
+    //   Gallery Script
+    document.querySelectorAll(
+        '.egypt-gallery-images-container > div, \
+   .rome-gallery-images-container > div, \
+   .greek-gallery-images-container > div'
+    ).forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const formData = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbzCfi_37uA4PTnm4GQrB8gXdAUEGzVsC1UGhhUsQbhxxPsilllOHZl3g8P2fREFuKsF/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert("Thank you! Your message has been saved.");
+                    form.reset();
+                } else {
+                    alert("Error saving your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error saving your message.");
+            });
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echos of History</title>
+    <link rel="stylesheet" href="nhome.css">
+     <link rel="stylesheet" href="ncivillization.css">
+     <link rel="stylesheet" href="neventtimeline.css">
+    <link rel="stylesheet" href="ngallery.css">
+     <link rel="stylesheet" href="ncontact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    // <!-- Contact Dialogue box Script -->
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("thankYouPopup");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();          // stop page reload
+            popup.style.display = "flex";
+            form.reset();                // clear inputs
+        });
+    });
+
+    function closePopup() {
+        document.getElementById("thankYouPopup").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                 <li id="nav-page1"><a href="ncivillization.html">Civilization</a></li>
+                <li id="nav-page2"><a href="neventtimeline.html">Events Timeline</a></li>
+                <li id="nav-page3" class="logo"><a href="index.html"><img width=" 250px"
+                            src="https://image2url.com/images/1765829899703-c623cf8c-7187-450b-a3ca-544af0471590.png"
+                            alt="Echos of History Logo" class="nav-logo"></a></li>
+                <li id="nav-page4"><a href="ngallery.html">Gallery</a></li>
+                <li id="nav-page5"><a href="ncontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="pages">
+        <!-- GALLERY PAGE -->
+        <div class="page" id=”page4”>
+            <section id="galleryPage" class="event-hero">
+
+                <div class="gallery-hero-img">
+                    <img src="./Assets/gallery-assets/gallery hero.png" alt="gallery Hero"
+                        class="hero-bg-img">
+
+                    <div class="gallery-hero-text">
+                        <h1 class="gallery-hero-heading">Gallery of Civilizations</h1>
+                        <p class="gallery-hero-subheading">
+                            A visual journey through the world’s most remarkable ancient cultures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="gallery-text-container">
+                    <h2 class="gallery-text-heading">A Visual Journey Through the World’s Earliest Cultures</h2>
+                    <p>
+                        This gallery presents a curated collection of renowned individuals who shaped the political,
+                        intellectual, artistic, and cultural foundations of ancient civilizations. From visionary rulers
+                        and
+                        philosophers to scholars and strategists, each figure represents a defining force in human
+                        history.
+                    </p>
+                    <img class="gallery-info-img"
+                        src="./Assets/gallery-assets/gallery- info.png" alt="gallery-info-img"
+                        srcset="">
+                </div>
+                <div class="gallery">
+                    <!-- Egypt Gallery -->
+                    <div class="egypt-gallery-container">
+                        <h2 class="egypt-gallery-heading">Ancient Egypt</h2>
+                        <div class="egypt-gallery-images-container">
+                            <div class="egypt-gallery-img1-container">
+                                <img src="./Assets/gallery-assets/egyptian/Screenshot 2025-12-09 131403-Picsart-AiImageEnhancer.png" alt=""
+                                    class="egypt-gallery-img1">
+                                <p class="egypt-gallery-img1-name">Cleopatra</p>
+                            </div>
+                            <div class="egypt-gallery-img2-container">
+                                <img src="./Assets/gallery-assets/egyptian/image-Picsart-AiImageEnhancer (1).png" alt=""
+                                    class="egypt-gallery-img2">
+                                <p class="egypt-gallery-img2-name">Ramses II</p>
+                            </div>
+                            <div class="egypt-gallery-img3-container">
+                                <img src="./Assets/gallery-assets/egyptian/Screenshot 2025-12-09 132644.png" alt=""
+                                    class="egypt-gallery-img3">
+                                <p class="egypt-gallery-img3-name">Q Nefertiti</p>
+                            </div>
+                            <div class="egypt-gallery-img4-container">
+                                <img src="./Assets/gallery-assets/egyptian/Screenshot 2025-12-09 133004.png" alt=""
+                                    class="egypt-gallery-img4">
+                                <p class="egypt-gallery-img4-name">Imhotep</p>
+                            </div>
+                        </div>
+
+                        <a href="https://www.worldhistory.org/collection/253/a-gallery-of-ancient-egyptian-architecture/52/?utm_source=chatgpt.com"
+                            class="gallery-link">
+                            <button class="egypt-gallery-btn">Explore More</button>
+                        </a>
+
+                    </div>
+
+                    <!-- Rome Gallery -->
+                    <div class="rome-gallery-container">
+                        <h2 class="rome-gallery-heading">Roman Empire</h2>
+                        <div class="rome-gallery-images-container">
+                            <div class="rome-gallery-img1-container">
+                                <img src="./Assets/gallery-assets/roman/image-Picsart-AiImageEnhancer (2).png" alt=""
+                                    class="rome-gallery-img1">
+                                <p class="rome-gallery-img1-name">Alexander </p>
+                            </div>
+                            <div class="rome-gallery-img2-container">
+                                <img src="./Assets/gallery-assets/roman/image-Picsart-AiImageEnhancer (3).png" alt=""
+                                    class="rome-gallery-img2">
+                                <p class="rome-gallery-img2-name">Socrates</p>
+                            </div>
+                            <div class="rome-gallery-img3-container">
+                                <img src="./Assets/gallery-assets/roman/image-Picsart-AiImageEnhancer (4).png" alt=""
+                                    class="rome-gallery-img3">
+                                <p class="rome-gallery-img3-name">Homer</p>
+                            </div>
+                            <div class="rome-gallery-img4-container">
+                                <img src="./Assets/gallery-assets/roman/Screenshot 2025-12-09 140217.png" alt=""
+                                    class="rome-gallery-img4">
+                                <p class="rome-gallery-img4-name">Plato</p>
+                            </div>
+                        </div>
+                        <a href=" https://karenswhimsy.com/ancient-roman-architecture/?utm_source=chatgpt.com"
+                            class="gallery-link">
+                            <button class="rome-gallery-btn">Explore More</button>
+                        </a>
+
+
+
+                    </div>
+
+                    <!-- Greek Gallery -->
+                    <div class="greek-gallery-container">
+                        <h2 class="greek-gallery-heading">Ancient Greek</h2>
+                        <div class="greek-gallery-images-container">
+                            <div class="greek-gallery-img1-container">
+                                <img src="./Assets/gallery-assets/greek/image-Picsart-AiImageEnhancer (5).png" alt=""
+                                    class="greek-gallery-img1">
+                                <p class="greek-gallery-img1-name">Julius Caesar</p>
+                            </div>
+                            <div class="greek-gallery-img2-container">
+                                <img src="./Assets/gallery-assets/greek/Screenshot 2025-12-09 140618.png" alt=""
+                                    class="greek-gallery-img2">
+                                <p class="greek-gallery-img2-name">Augustus</p>
+                            </div>
+                            <div class="greek-gallery-img3-container">
+                                <img src="./Assets/gallery-assets/greek/Screenshot 2025-12-09 140728.png" alt=""
+                                    class="greek-gallery-img3">
+                                <p class="greek-gallery-img3-name">Marcus Aurelius</p>
+                            </div>
+                            <div class="greek-gallery-img4-container">
+                                <img src="./Assets/gallery-assets/greek/scupltures-Picsart-AiImageEnhancer.jfif" alt=""
+                                    class="greek-gallery-img4">
+                                <p class="greek-gallery-img4-name">Cicero</p>
+                            </div>
+                        </div>
+                        <a href="https://ancient-greece.org/category/greek-art/">
+                            <button class="greek-gallery-btn">Explore More</button>
+                        </a>
+
+                    </div>
+                </div>
+
+            </section>
+            <footer id="footer" class="footer-img">
+                <img src="https://i.ibb.co/pvYBkcPZ/footer.png" alt="footer" srcset="">
+            </footer>
+        </div>
+    </main>
+</body>
+<script>
+    // Nav link script
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar ul li:not(.logo) > a');
+
+        function setActiveLinkByHash() {
+            const currentHash = window.location.hash;
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentHash
+                );
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        setActiveLinkByHash();
+        window.addEventListener('hashchange', setActiveLinkByHash);
+    });
+
+    // Event timeline script
+    document.querySelectorAll(".content-box").forEach(box => {
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+    });
+
+    //   Gallery Script
+    document.querySelectorAll(
+        '.egypt-gallery-images-container > div, \
+   .rome-gallery-images-container > div, \
+   .greek-gallery-images-container > div'
+    ).forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const formData = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbzCfi_37uA4PTnm4GQrB8gXdAUEGzVsC1UGhhUsQbhxxPsilllOHZl3g8P2fREFuKsF/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert("Thank you! Your message has been saved.");
+                    form.reset();
+                } else {
+                    alert("Error saving your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error saving your message.");
+            });
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echos of History</title>
+    <link rel="stylesheet" href="nhome.css">
+     <link rel="stylesheet" href="ncivillization.css">
+     <link rel="stylesheet" href="neventtimeline.css">
+    <link rel="stylesheet" href="ngallery.css">
+     <link rel="stylesheet" href="ncontact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    // <!-- Contact Dialogue box Script -->
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("thankYouPopup");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();          // stop page reload
+            popup.style.display = "flex";
+            form.reset();                // clear inputs
+        });
+    });
+
+    function closePopup() {
+        document.getElementById("thankYouPopup").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li id="nav-page1"><a href="ncivillization.html">Civilization</a></li>
+                <li id="nav-page2"><a href="neventtimeline.html">Events Timeline</a></li>
+                <li id="nav-page3" class="logo"><a href="index.html"><img width=" 250px"
+                            src="https://image2url.com/images/1765829899703-c623cf8c-7187-450b-a3ca-544af0471590.png"
+                            alt="Echos of History Logo" class="nav-logo"></a></li>
+                <li id="nav-page4"><a href="ngallery.html">Gallery</a></li>
+                <li id="nav-page5"><a href="ncontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="pages">
+        <!-- CONTACT PAGE -->
+        <div class="page" id=”page5”>
+            <section id="contactPage" class="contact-hero">
+
+                <div class="contact-hero-img">
+                    <img src="./Assets/contact-assets/contact hero.png" alt="Contact Hero"
+                        class="hero-bg-img">
+
+                    <div class="contact-hero-text">
+                        <h1 class="contact-hero-heading">CONTACT US</h1>
+                    </div>
+                </div>
+
+                <div class="contact-project-container">
+                    <img src="./Assets/contact-assets/contact art img.png" alt=""
+                        class="contact-project-img">
+                    <div class="contact-project-text">
+                        <h2 class="contact-text-heading">About Project</h2>
+                        <p class="contact-text">Echoes of History is a visually engaging and beginner-friendly web
+                            project
+                            designed to present ancient civilizations in a clear, modern, and immersive way. The website
+                            combines short, easy-to-read content with aesthetic imagery, structured layouts, and smooth
+                            visual
+                            elements to make historical learning more enjoyable.
+                            Each section is thoughtfully arranged to avoid clutter and maintain a clean user experience.
+                            Through
+                            curated visuals, concise explanations, and an elegant design style, the project offers a
+                            refined
+                            introduction to major civilizations and their cultural impact—making history accessible,
+                            appealing,
+                            and meaningful for every visitor.</p>
+                    </div>
+                </div>
+                <div class="contact-form-bg">
+                    <!-- Background Image -->
+                    <img src="./Assets/contact-assets/contact form bg.png"
+                        alt="Contact background" class="contact-bg-img" />
+
+                    <!-- Form Content -->
+                    <div class="contact-form-wrapper">
+                        <h2 class="contact-form-heading">Get in Touch!</h2>
+
+                        <form class="contact-form" id="contactForm">
+                            <label>First Name</label>
+                            <input type="text" name="firstName" required />
+
+                            <label>Last Name</label>
+                            <input type="text" name="lastName" required />
+
+                            <label>Email</label>
+                            <input type="email" name="email" required />
+
+                            <label>Message</label>
+                            <textarea name="message" rows="10" required></textarea>
+
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+
+
+                    <!-- POPUP (hidden by default) -->
+                    <div id="thankYouPopup" class="popup-overlay">
+                        <div class="popup-box">
+                            <h3>Thank You!</h3>
+                            <p>Your message has been received.</p>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div>
+                    </div>
+
+            </section>
+
+            <!-- FOOTER SECTION -->
+            <footer id="footer" class="footer-img">
+                <img src="https://i.ibb.co/pvYBkcPZ/footer.png" alt="footer" srcset="">
+            </footer>
+        </div>
+    </main>
+</body>
+<script>
+    // Nav link script
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar ul li:not(.logo) > a');
+
+        function setActiveLinkByHash() {
+            const currentHash = window.location.hash;
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentHash
+                );
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        setActiveLinkByHash();
+        window.addEventListener('hashchange', setActiveLinkByHash);
+    });
+    // Event timeline script
+    document.querySelectorAll(".content-box").forEach(box => {
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+    });
+
+    //   Gallery Script
+    document.querySelectorAll(
+        '.egypt-gallery-images-container > div, \
+   .rome-gallery-images-container > div, \
+   .greek-gallery-images-container > div'
+    ).forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const formData = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbzCfi_37uA4PTnm4GQrB8gXdAUEGzVsC1UGhhUsQbhxxPsilllOHZl3g8P2fREFuKsF/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert("Thank you! Your message has been saved.");
+                    form.reset();
+                } else {
+                    alert("Error saving your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error saving your message.");
+            });
+    });
+
+</script>
+
+</html>

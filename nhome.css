@@ -1,0 +1,276 @@
+/* -----------------------------
+    ROOT VARIABLES
+------------------------------ */
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #F6ECE0;
+  --color-secondary: #AC5225;
+  --color-accentp: #EBB2AD;
+  --color-accentb: #78898F;
+  --color-accentg: #8D957E;
+
+  /* ✨ Typography */
+  --font-title: 'Papyrus', sans-serif;
+  --font-subheading: "Libre Baskerville", serif;
+}
+
+/* -----------------------------
+    GLOBAL RESET
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+    scroll-snap-type: y mandatory;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+#homePage,
+#civilizationPage,
+#eventPage,
+#galleryPage,
+#contactPage {
+    padding-top: 70px; /* match navbar height */
+    box-sizing: border-box; /* ensures padding doesn’t break layout */
+}
+body {
+  background: var(--color-primary);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+/* -----------------------------
+    HEADER & NAVBAR
+------------------------------ */
+header {
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.navbar ul li a {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar ul li:not(.logo) > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%);
+  transition: width 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.navbar ul li:not(.logo) > a:hover::after,
+.navbar ul li:not(.logo) > a.active::after {
+  width: 100%;
+  opacity: 1;
+}
+/* <!-- HOME PAGE --> */
+/* -----------------------------
+   HOME HERO SECTION
+------------------------------ */
+.home-hero-img {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 95vh;
+  display: block;
+}
+
+.home-hero-text {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+}
+
+.home-hero-heading {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+.home-hero-subheading {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-family: var(--font-subheading);
+  color: var(--color-secondary);
+}
+
+/* -----------------------------
+    SECTION HEADINGS
+------------------------------ */
+.home-section-heading {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin: 50px auto;
+  color: var(--color-secondary);
+}
+
+/* -----------------------------
+    MAIN CONTENT CONTAINER
+------------------------------ */
+.content {
+  width: 100%;
+  padding: 0; 
+  display: flex;
+  flex-direction: column;
+  gap: 100px; /* vertical space between sections */
+  box-sizing: border-box;
+  align-items: center; /* center the blocks */
+}
+
+/* -----------------------------
+    SECTION CONTAINERS
+------------------------------ */
+.civilization,
+.event-timeline,
+.historic-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* center the combined block */
+  gap: 40px;                /* space between image and text box */
+  flex-wrap: wrap;
+  width: 90%;               /* total section width = 90% of container */
+}
+
+/* -----------------------------
+    SECTION HEADINGS
+------------------------------ */
+.home-civillization-heading,
+.event-timeline-heading,
+.historic-gallery-heading {
+  font-family: var(--font-title);
+  font-size: 42px; /* slightly larger */
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
+
+/* -----------------------------
+    TEXT BOXES
+------------------------------ */
+.civilization-text-box,
+.event-timeline-text-box,
+.historic-gallery-text-box {
+  flex: 1 1 450px;           /* slightly larger minimum width */
+  max-width: 650px;          /* slightly larger max width */
+  padding: 60px;             /* increased padding */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    
+  text-align: left;
+  color: var(--color-primary);
+}
+
+/* Background images */
+.civilization-text-box { 
+  background-image: url(../Assets/home-assets/civillization-bg.png); 
+}
+.event-timeline-text-box { 
+  background-image: url(../Assets/home-assets/event-timeline-bg.png); 
+}
+.historic-gallery-text-box { 
+  background-image: url(../Assets/home-assets/gallery-bg.png); 
+}
+
+/* Paragraphs inside text boxes */
+.content p {
+  font-size: 16px; /* slightly larger */
+  font-family: var(--font-subheading);
+  margin-bottom: 20px;
+}
+
+/* Headings inside text boxes */
+h3 {
+  font-family: var(--font-subheading);
+  font-size: 1.9rem; /* slightly larger */
+  margin-bottom: 12px;
+}
+
+/* -----------------------------
+    SECTION IMAGES
+------------------------------ */
+.civilization img,
+.event-timeline img,
+.historic-gallery img {
+  flex: 1 1 380px;  /* slightly larger */
+  max-width: 400px; /* slightly larger */
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* -----------------------------
+    BUTTONS
+------------------------------ */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;       /* slightly larger */
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+  align-self: flex-start;
+}
+
+button:hover {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+
+/* -----------------------------
+    FOOTER
+------------------------------ */
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

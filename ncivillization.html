@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echos of History</title>
+<link rel="stylesheet" href="nhome.css">
+     <link rel="stylesheet" href="ncivillization.css">
+     <link rel="stylesheet" href="neventtimeline.css">
+    <link rel="stylesheet" href="ngallery.css">
+     <link rel="stylesheet" href="ncontact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    // <!-- Contact Dialogue box Script -->
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("thankYouPopup");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();          // stop page reload
+            popup.style.display = "flex";
+            form.reset();                // clear inputs
+        });
+    });
+
+    function closePopup() {
+        document.getElementById("thankYouPopup").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li id="nav-page1"><a href="ncivillization.html">Civilization</a></li>
+                <li id="nav-page2"><a href="neventtimeline.html">Events Timeline</a></li>
+                <li id="nav-page3" class="logo"><a href="index.html"><img width=" 250px"
+                            src="https://image2url.com/images/1765829899703-c623cf8c-7187-450b-a3ca-544af0471590.png"
+                            alt="Echos of History Logo" class="nav-logo"></a></li>
+                <li id="nav-page4"><a href="ngallery.html">Gallery</a></li>
+                <li id="nav-page5"><a href="ncontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="pages">
+        <!-- CIVILLIZATION PAGE -->
+        <div class="page" id=”page2”>
+            <section id="civilizationPage" class="civil-hero">
+                <!-- CIVILLIZATION HERO IMG -->
+                <div class="civil-hero-img">
+                    <img src="./Assets/civillization-assets/civillization hero.png" alt="Civilization Hero"
+                        class="hero-bg-img">
+
+                    <div class="civil-hero-text">
+                        <h1 class="civil-hero-heading">CIVILLIZATIONS</h1>
+                        <p class="civil-hero-subheading">
+                            Discover how early societies rose, adapted, and shaped the foundations of our modern world.
+                        </p>
+                    </div>
+                </div>
+                <!-- CIVILLIZATION HERO video -->
+                <!-- <div class="civil-hero-img">
+    <video autoplay muted loop playsinline class="hero-bg-img">
+        <source src="https://files.fm/u/fq2jy8snju" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="civil-hero-text">
+        <h1 class="civil-hero-heading">CIVILLIZATIONS</h1>
+        <p class="civil-hero-subheading">
+            Discover how early societies rose, adapted, and shaped the foundations of our modern world.
+        </p>
+    </div>
+</div> -->
+
+
+                <!-- ANCIENT EGYPT -->
+                <div class="civil-egypt-container">
+                    <div class="civil-egypt-text-container">
+                        <div class="civil-egypt-heading">Ancient Egypt</div>
+                        <p>
+                            Ancient Egypt thrived along the Nile for thousands of years, creating some of the world’s
+                            most
+                            iconic monuments. Its people developed early writing, religion, art, and advanced knowledge
+                            in
+                            science and mathematics. The legacy of its pharaohs, temples, and pyramids still shapes our
+                            understanding of ancient history.
+                        </p>
+                    </div>
+                    <div class="civil-egypt-img">
+                        <img src="./Assets/civillization-assets/Ancient Egypt.png" alt="Ancient Egypt"
+                            srcset="">
+                    </div>
+                    <div class="civil-egypt-elements-container">
+                        <div class="architect-container">
+                            <img src="./Assets/civillization-assets/cultural.png"
+                                alt="arhitect-icon" class="arhitect-icon">
+                            <p class="architect-text">Pyramids, temples, grand palaces</p>
+                        </div>
+                        <div class="culture-container">
+                            <img src="./Assets/civillization-assets/greek-temple.png"
+                                alt="culture-icon" class="culture-icon">
+                            <p class="culture-text">Linen clothing, Nile lifestyle, strong beliefs</p>
+                        </div>
+                        <div class="major-events-container">
+                            <img src="./Assets/civillization-assets/battle.png"
+                                alt="major-events-icon" class="major-events-icon">
+                            <p class="major-events-text">Unification, pyramid age, major battles</p>
+                        </div>
+                        <div class="famous-figures-container">
+                            <img src="./Assets/civillization-assets/crown.png"
+                                alt="famous-figures-icon" class="famous-figures-icon">
+                            <p class="famous-figures-text">Ramses II, Hatshepsut, King Tut</p>
+                        </div>
+                    </div>
+                    <a href="https://education.nationalgeographic.org/resource/resource-library-ancient-egypt/">
+                        <button class="civil-egypt-btn">Explore More</button>
+                    </a>
+
+
+                </div>
+
+                <!-- ANCIENT GREEK -->
+                <div class="civil-greek-container">
+                    <div class="civil-greek-text-container">
+                        <div class="civil-greek-heading">Ancient Greek</div>
+                        <p>
+                            Ancient Greece was a powerful civilization known for its philosophy, democracy, art, and
+                            scientific
+                            thinking. Its ideas shaped modern law, education, and culture, making it one of the most
+                            influential
+                            civilizations in history.
+                        </p>
+                    </div>
+                    <div class="civil-greek-img">
+                        <img src="./Assets/civillization-assets/Ancient Greek.png" alt="Ancient Egypt"
+                            srcset="">
+                    </div>
+                    <div class="civil-greek-elements-container">
+                        <div class="architect-container">
+                            <img src="./Assets/civillization-assets/cultural.png"
+                                alt="arhitect-icon" class="arhitect-icon">
+                            <p class="architect-text">Marble temples, columns, theaters</p>
+                        </div>
+                        <div class="culture-container">
+                            <img src="./Assets/civillization-assets/greek-temple.png"
+                                alt="culture-icon" class="culture-icon">
+                            <p class="culture-text">Philosophy, Olympic games, rich myths</p>
+                        </div>
+                        <div class="major-events-container">
+                            <img src="./Assets/civillization-assets/battle.png"
+                                alt="major-events-icon" class="major-events-icon">
+                            <p class="major-events-text">Persian wars, Peloponnesian war, Golden Age</p>
+                        </div>
+                        <div class="famous-figures-container">
+                            <img src="./Assets/civillization-assets/crown.png"
+                                alt="famous-figures-icon" class="famous-figures-icon">
+                            <p class="famous-figures-text">Alexander the Great, Socrates, Pericles</p>
+                        </div>
+                    </div>
+                    <a href="https://education.nationalgeographic.org/resource/resource-library-ancient-greece/">
+                        <button class="civil-greek-btn">Explore More</button>
+                    </a>
+
+
+                </div>
+
+
+                <!-- ROMAN EMPIRE -->
+                <div class="civil-rome-container">
+                    <div class="civil-rome-text-container">
+                        <div class="civil-rome-heading">Roman Empire</div>
+                        <p>
+                            The Roman Empire was one of history’s most powerful civilizations, known for its
+                            engineering,
+                            military strength, law system, and vast cultural influence. It shaped modern cities,
+                            languages, and
+                            governance across Europe and beyond.
+                        </p>
+                    </div>
+                    <div class="civil-rome-img">
+                        <img src="./Assets/civillization-assets/Ancient Rome.png" alt="Ancient Egypt"
+                            srcset="">
+                    </div>
+                    <div class="civil-rome-elements-container">
+                        <div class="architect-container">
+                            <img src="./Assets/civillization-assets/cultural.png"
+                                alt="arhitect-icon" class="arhitect-icon">
+                            <p class="architect-text">Grand amphitheaters, arches, aqueducts</p>
+                        </div>
+                        <div class="culture-container">
+                            <img src="./Assets/civillization-assets/greek-temple.png"
+                                alt="culture-icon" class="culture-icon">
+                            <p class="culture-text">Latin language, festivals, daily urban life</p>
+                        </div>
+                        <div class="major-events-container">
+                            <img src="./Assets/civillization-assets/battle.png"
+                                alt="major-events-icon" class="major-events-icon">
+                            <p class="major-events-text">Punic Wars, rise of Caesar, empire expansion</p>
+                        </div>
+                        <div class="famous-figures-container">
+                            <img src="./Assets/civillization-assets/crown.png"
+                                alt="famous-figures-icon" class="famous-figures-icon">
+                            <p class="famous-figures-text">Julius Caesar, Augustus, Constantine</p>
+                        </div>
+                    </div>
+                    <a href="https://ancientromelive.org/">
+                        <button class="civil-rome-btn">Explore More</button>
+                    </a>
+                </div>
+            </section>
+            <footer id="footer" class="footer-img">
+                <img src="https://i.ibb.co/pvYBkcPZ/footer.png" alt="footer" srcset="">
+            </footer>
+        </div>
+    </main>
+</body>
+<script>
+    // Nav link script
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar ul li:not(.logo) > a');
+
+        function setActiveLinkByHash() {
+            const currentHash = window.location.hash;
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentHash
+                );
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        setActiveLinkByHash();
+        window.addEventListener('hashchange', setActiveLinkByHash);
+    });
+    // Event timeline script
+    document.querySelectorAll(".content-box").forEach(box => {
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+    });
+
+    //   Gallery Script
+    document.querySelectorAll(
+        '.egypt-gallery-images-container > div, \
+   .rome-gallery-images-container > div, \
+   .greek-gallery-images-container > div'
+    ).forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const formData = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbzCfi_37uA4PTnm4GQrB8gXdAUEGzVsC1UGhhUsQbhxxPsilllOHZl3g8P2fREFuKsF/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert("Thank you! Your message has been saved.");
+                    form.reset();
+                } else {
+                    alert("Error saving your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error saving your message.");
+            });
+    });
+
+</script>
+
+</html>

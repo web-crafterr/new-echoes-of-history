@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echos of History</title>
+  <link rel="stylesheet" href="nhome.css">
+     <link rel="stylesheet" href="ncivillization.css">
+     <link rel="stylesheet" href="neventtimeline.css">
+    <link rel="stylesheet" href="ngallery.css">
+     <link rel="stylesheet" href="ncontact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<script>
+    // <!-- Contact Dialogue box Script -->
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("thankYouPopup");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();          // stop page reload
+            popup.style.display = "flex";
+            form.reset();                // clear inputs
+        });
+    });
+
+    function closePopup() {
+        document.getElementById("thankYouPopup").style.display = "none";
+    }
+</script>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li id="nav-page1"><a href="ncivillization.html">Civilization</a></li>
+                <li id="nav-page2"><a href="neventtimeline.html">Events Timeline</a></li>
+                <li id="nav-page3" class="logo"><a href="index.html"><img width=" 250px"
+                            src="https://image2url.com/images/1765829899703-c623cf8c-7187-450b-a3ca-544af0471590.png"
+                            alt="Echos of History Logo" class="nav-logo"></a></li>
+                <li id="nav-page4"><a href="ngallery.html">Gallery</a></li>
+                <li id="nav-page5"><a href="ncontact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="pages">
+        <!-- EVENTTIMELINE PAGE -->
+        <div class="page" id=”page3”>
+            <section id="eventPage" class="event-hero">
+
+                <div class="eventtimeline-hero-img">
+                    <img src="./Assets/eventtimeline-assets/event timeline hero.png"
+                        alt="Eventtimeline Hero" class="hero-bg-img">
+
+                    <div class="event-hero-text">
+                        <h1 class="event-hero-heading">Timeline of Three Great Civilizations</h1>
+                        <p class="event-hero-subheading">
+                            A complete journey from Ancient Egypt to Greece and the Roman Empire—connected in one
+                            historical flow.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="event-text-container">
+                    <h2 class="event-text-heading">A Unified Journey Through Ancient Empires</h2>
+                    <p class="event-text">Travel through thousands of years of human history as we explore how Ancient
+                        Egypt laid the foundations of early civilization, how Greece advanced philosophy and culture,
+                        and how the Roman Empire shaped the world through innovation and power. This unified timeline
+                        presents their greatest milestones in the order they unfolded, showing how each civilization
+                        influenced the next and contributed to the story of human progress.</p>
+                </div>
+                <div class="timeline-chart-container">
+
+                    <div class="timeline-item left">
+                        <div class="content-box">
+                            <h3>(3100–2686 BCE)</h3>
+                            <h2>1. Rise of Ancient Egypt</h2>
+                            <p>Egypt unites under its first pharaoh, marking the start of the Early Dynastic Period.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="content-box">
+                            <h3>(2686–2181 BCE)</h3>
+                            <h2>2. Construction of the Pyramids</h2>
+                            <p>During the Old Kingdom period, Egypt builds the Pyramids of Giza.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="content-box">
+                            <h3>(1550–1069 BCE)</h3>
+                            <h2>3. Egypt’s Golden Age</h2>
+                            <p>Powerful pharaohs expand Egypt's influence across the region.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="content-box">
+                            <h3>(800–500 BCE)</h3>
+                            <h2>4. Birth of Ancient Greece</h2>
+                            <p>Greek city-states lay the foundations for democracy and philosophy.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="content-box">
+                            <h3>(490–323 BCE)</h3>
+                            <h2>5. Greek Golden Age</h2>
+                            <p>Greece reaches its cultural and intellectual peak.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="content-box">
+                            <h3>(753–146 BCE)</h3>
+                            <h2>6. Rise of the Roman Republic</h2>
+                            <p>Rome grows into a powerful republic.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="content-box">
+                            <h3>(30 BCE–476 CE)</h3>
+                            <h2>7. Rome Conquers Egypt</h2>
+                            <p>Egypt becomes part of the Roman Empire.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-center-line"></div>
+                </div>
+
+
+
+            </section>
+            <footer id="footer" class="footer-img">
+                <img src="https://i.ibb.co/pvYBkcPZ/footer.png" alt="footer" srcset="">
+            </footer>
+        </div>
+    </main>
+</body>
+<script>
+    // Nav link script
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('.navbar ul li:not(.logo) > a');
+
+        function setActiveLinkByHash() {
+            const currentHash = window.location.hash;
+            navLinks.forEach(link => {
+                link.classList.toggle(
+                    'active',
+                    link.getAttribute('href') === currentHash
+                );
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        setActiveLinkByHash();
+        window.addEventListener('hashchange', setActiveLinkByHash);
+    });
+
+    // Event timeline script
+    document.querySelectorAll(".content-box").forEach(box => {
+        box.addEventListener("click", () => {
+            box.classList.toggle("expanded");
+        });
+    });
+
+    //   Gallery Script
+    document.querySelectorAll(
+        '.egypt-gallery-images-container > div, \
+   .rome-gallery-images-container > div, \
+   .greek-gallery-images-container > div'
+    ).forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('expanded');
+        });
+    });
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+
+        const formData = {
+            firstName: form.firstName.value,
+            lastName: form.lastName.value,
+            email: form.email.value,
+            message: form.message.value
+        };
+
+        fetch("https://script.google.com/macros/s/AKfycbzCfi_37uA4PTnm4GQrB8gXdAUEGzVsC1UGhhUsQbhxxPsilllOHZl3g8P2fREFuKsF/exec", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === "success") {
+                    alert("Thank you! Your message has been saved.");
+                    form.reset();
+                } else {
+                    alert("Error saving your message.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Error saving your message.");
+            });
+    });
+
+</script>
+
+</html>

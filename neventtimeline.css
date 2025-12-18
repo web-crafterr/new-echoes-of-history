@@ -1,0 +1,328 @@
+/* -----------------------------
+    ROOT VARIABLES
+------------------------------ */
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #F6ECE0;
+  --color-secondary: #AC5225;
+  --color-accentp: #EBB2AD;
+  --color-accentb: #78898F;
+  --color-accentg: #8D957E;
+
+  /* ✨ Typography */
+  --font-title: 'Papyrus', sans-serif;
+  --font-subheading: "Libre Baskerville", serif;
+}
+
+/* -----------------------------
+    GLOBAL RESET
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+    scroll-snap-type: y mandatory;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+#homePage,
+#civilizationPage,
+#eventPage,
+#galleryPage,
+#contactPage {
+    padding-top: 70px; /* match navbar height */
+    box-sizing: border-box; /* ensures padding doesn’t break layout */
+}
+body {
+  background: var(--color-primary);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+/* -----------------------------
+    HEADER & NAVBAR
+------------------------------ */
+header {
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.navbar ul li a {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar ul li:not(.logo) > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%);
+  transition: width 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.navbar ul li:not(.logo) > a:hover::after,
+.navbar ul li:not(.logo) > a.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+
+/* <!-- EVENTTIMELINE PAGE --> */
+/* -----------------------------
+   EVENT TIMELINE HERO SECTION
+------------------------------ */
+.eventtimeline-hero-img {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 75vh;
+  display: block;
+}
+
+.event-hero-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+}
+
+.event-hero-heading {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+.event-hero-subheading {
+  font-size: 1.2rem;
+  font-family: var(--font-subheading);
+  color: var(--color-secondary);
+}
+
+
+/* -----------------------------
+    SECTION HEADINGS
+------------------------------ */
+.section-heading,
+.event-text-heading {
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin: 50px auto;
+  color: var(--color-secondary);
+}
+
+.event-text-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 0px 20px;
+  position: relative;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.event-text-container p,
+.event-text {
+  font-family: var(--font-subheading);
+  width: 90%;
+  margin: 5px auto 30px auto;
+  color: var(--color-secondary);
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* -----------------------------
+    EVENT TIMELINE INFO CHART
+------------------------------ */
+
+
+/* Parent container (centers the timeline on the page) */
+.timeline-chart-container {
+  width: 100%;
+  max-width: 1000px;
+  /* container boundary where cards will sit */
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 24px;
+  box-sizing: border-box;
+  /* border: solid 2px var(--color-secondary); */
+}
+
+ .timeline-center-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-secondary);
+    transform: translateX(-50%);
+    z-index: -1;   /* keeps line behind cards */
+}
+
+/* each timeline row is full width but contains a fixed-size card */
+.timeline-item {
+  width: 100%;
+  position: relative;
+  margin: 40px 0;
+  box-sizing: border-box;
+  min-height: 1px;
+  /* prevents collapse */
+}
+
+/* FIXED card size — keeps cards visually identical */
+.content-box {
+  width: 360px;
+  padding: 22px;
+  border-radius: 14px;
+  background: var(--color-accentg);
+  color: var(--color-primary);
+  box-shadow: 0 20px 18px rgba(141,149,126, 0.12);
+  font-family: var(--font-subheading);
+  z-index: 3;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.35s ease;   /* smooth animation */
+}
+
+.content-box:hover {
+  transform: scale(1.08);      /* card expands */
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.20); /* stronger shadow */
+}
+
+.content-box.expanded {
+  transform: scale(1.12);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+}
+/* LEFT rows: card hugs the left edge of the container */
+.timeline-item.left .content-box {
+  margin-left: 0;
+  /* touches left boundary inside the container */
+  margin-right: auto;
+}
+
+/* RIGHT rows: card hugs the right edge of the container */
+.timeline-item.right .content-box {
+  margin-left: auto;
+  margin-right: 0;
+  /* touches right boundary inside the container */
+}
+
+/* Typography inside the cards */
+.content-box h3 {
+  margin: 0 0 8px;
+  font-family: var(--font-title);
+  font-size: 24px;
+  text-align: center;
+}
+
+.content-box h2 {
+  margin: 0 0 10px;
+  font-family: var(--font-title);
+  font-size: 20px;
+}
+
+.content-box p {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* CONNECTOR from center line to each card */
+/* We calculate the connector length as the horizontal space from center to the inner edge of the card.
+   Since the card width is fixed (360px), half the card is 180px. We add a small gap (gapX) so the connector
+   stops slightly before the card edge visually. Adjust gapX if you want more/less spacing. */
+/* Connecting Lines from box to center line */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 50%;         /* length of horizontal connector */
+    height: 3px;         /* thickness */
+    background: var(--color-secondary);
+    transform: translateY(-50%);
+}/*fault width and placement (overridden by left/right rules below) */
+
+/* gap between center line and card edge (visual breathing room) */
+:root {
+  --gapX: 14px;
+}
+
+/* CONNECTOR LINES FROM CENTER OF CARD EDGE TO CENTER LINE */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    background: var(--color-secondary);
+}
+
+/* LEFT → CENTER */
+.timeline-item.left::after {
+   left: 0; /* start at the left edge of the box */
+    width: calc(50% - 2px); /* distance from box center to vertical line */
+    transform: translateY(-50%);
+  
+}
+
+/* RIGHT → CENTER */
+.timeline-item.right::after {
+     right: 0; /* start at the right edge of the box */
+    width: calc(50% - 2px); /* distance from box center to vertical line */
+    transform: translateY(-50%);
+}
+
+/* CLEAR FLOATS */
+.timeline-chart-container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* -----------------------------
+    FOOTER
+------------------------------ */
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

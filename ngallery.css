@@ -1,0 +1,297 @@
+/* -----------------------------
+    ROOT VARIABLES
+------------------------------ */
+:root {
+  /* 🎨 Color Palette */
+  --color-primary: #F6ECE0;
+  --color-secondary: #AC5225;
+  --color-accentp: #EBB2AD;
+  --color-accentb: #78898F;
+  --color-accentg: #8D957E;
+
+  /* ✨ Typography */
+  --font-title: 'Papyrus', sans-serif;
+  --font-subheading: "Libre Baskerville", serif;
+}
+
+/* -----------------------------
+    GLOBAL RESET
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+    scroll-snap-type: y mandatory;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/* .page {
+  display: none;
+  min-height: 100vh;
+}
+
+.page.active {
+  display: block;
+} */
+
+
+#homePage,
+#civilizationPage,
+#eventPage,
+#galleryPage,
+#contactPage {
+    padding-top: 70px; /* match navbar height */
+    box-sizing: border-box; /* ensures padding doesn’t break layout */
+}
+body {
+  background: var(--color-primary);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+/* -----------------------------
+    HEADER & NAVBAR
+------------------------------ */
+header {
+  width: 100%;
+  background: var(--color-secondary);
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.navbar ul li a {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar ul li:not(.logo) > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transform: translateX(-50%);
+  transition: width 0.35s ease, opacity 0.35s ease;
+  opacity: 0;
+}
+
+.navbar ul li:not(.logo) > a:hover::after,
+.navbar ul li:not(.logo) > a.active::after {
+  width: 100%;
+  opacity: 1;
+}
+ /* <!-- GALLERY PAGE --> */
+ /* -----------------------------
+   GALLERY HERO SECTION
+------------------------------ */
+.gallery-hero-img,.gallery-info-img {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 75vh;
+  display: block;
+}
+
+.gallery-hero-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 80%;
+}
+
+.gallery-hero-heading {
+  font-family: var(--font-title);
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+.gallery-hero-subheading {
+  font-size: 1.2rem;
+  font-family: var(--font-subheading);
+  color: var(--color-secondary);
+}
+
+/* -----------------------------
+    SECTION HEADINGS
+------------------------------ */
+.section-heading,
+.gallery-text-heading{
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin: 50px auto 10px auto;
+  padding: 0px;
+  color: var(--color-secondary);
+}
+
+.egypt-gallery-heading, .rome-gallery-heading, .greek-gallery-heading{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+/* ===== Main Gallery Wrapper ===== */
+.gallery {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: var(--color-primary);
+}
+
+/* ===== Section Containers ===== */
+.egypt-gallery-container,
+.rome-gallery-container,
+.greek-gallery-container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===== Headings ===== */
+.egypt-gallery-heading,
+.rome-gallery-heading,
+.greek-gallery-heading {
+  font-family: 'Papyrus', sans-serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: var(--color-secondary);
+}
+
+/* ===== Image Rows ===== */
+.egypt-gallery-images-container,
+.rome-gallery-images-container,
+.greek-gallery-images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* ===== Individual Image Containers ===== */
+.egypt-gallery-images-container > div,
+.rome-gallery-images-container > div,
+.greek-gallery-images-container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.egypt-gallery-images-container > div:hover,
+.rome-gallery-images-container > div:hover,
+.greek-gallery-images-container > div:hover {
+  transform: scale(1.05);
+  border-radius: 15px ;
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.20);
+}
+.egypt-gallery-images-container > div.expanded,
+.rome-gallery-images-container > div.expanded,
+.greek-gallery-images-container > div.expanded {
+  transform: scale(1.12);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.gallery-text-container p{
+  font-family: var(--font-subheading);
+    width: 80%;
+    margin: 5px auto 30px auto;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-secondary);
+}
+
+/* ===== Images ===== */
+.egypt-gallery-images-container img,
+.rome-gallery-images-container img,
+.greek-gallery-images-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+   object-position: top;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Names ===== */
+.egypt-gallery-images-container p,
+.rome-gallery-images-container p,
+.greek-gallery-images-container p {
+  font-family: var(--font-title);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+
+.egypt-gallery-btn,
+.rome-gallery-btn,
+.greek-gallery-btn {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-family: var(--font-subheading);
+  padding: 12px 25px;       /* slightly larger */
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.3s ease;
+  width: auto;
+  align-self: flex-start;
+  filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.2));
+}
+
+.egypt-gallery-btn:hover,
+.rome-gallery-btn:hover,
+.greek-gallery-btn:hover  {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  transform: scale(1.1);
+
+}
+/* -----------------------------
+    FOOTER
+------------------------------ */
+footer {
+  margin: 0;
+  padding: 0;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
